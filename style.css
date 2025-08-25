@@ -16,14 +16,13 @@ body, html {
     min-height: 100svh;             /* full viewport height, mobile-safe */
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .sticky-layout main {
+.sticky-layout main {
     flex: 1 0 auto;                 /* push footer to the bottom */
-  }
+}
 /* Override only the main homepage background */
 .homepage {
-    width: 100vw;
     height: 100vh;
     background-color: #0D0E1A !important;
     /* background-image: url('pexels-umkreisel-app-956981.jpg'); */
@@ -42,7 +41,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('background-overlay.svg');
+    background-image: url('./svg/background-overlay.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +112,11 @@ a{
     min-height: calc(100vh - 200px);
     display: flex;
     align-items: center;
+    margin-top: 40px; /* Adjust as needed for your navbar height */
+    margin-bottom: 80px;
+    z-index: 1;
 }
+
 
 /* Main content container - ensure it's above the background */
 .row.p-4.pb-0.pe-lg-0.pt-lg-5.align-items-center.rounded-3.border.shadow-lg {
@@ -295,7 +298,198 @@ footer a img {
 .project-1{
     height: 200px;
 }
-.project-text{
-    color: white;
+
+
+.websiteImage {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
+
+/* Featured Projects Title */
+.featured-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0px;
+  margin-bottom: 2.5rem;
+  text-shadow: none; /* Remove faded shadow */
+  opacity: 1 !important; /* Ensure full opacity */
+  position: relative;
+  z-index: 30; /* Ensure above overlays */
+}
+
+/* Image container with white background */
+.project-img-bg {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 340px;
+  min-height: 270px;
+  max-width: 486px;
+  max-height: 347px;
+  position: relative;
+  z-index: 2;
+}
+
+.websiteImage {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text container with transparent background, smaller size */
+.project-text-bg {
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  min-height: 150px;         /* Match image height */
+  max-width: 600px;          /* Slightly wider */
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #fff;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;       /* Not bold */
+  position: relative;
+  z-index: 3;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.2px;
+}
+
+.project-info {
+  margin-top: 1rem;
+  padding-top: 0.7rem;
+  font-size: 0.92rem;
+}
+
+
+
+
+.demo-link, .github-link {
+  color: #aee6ff;
+  font-weight: 500;
+  margin-right: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+.demo-link:hover, .github-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Sticky footer fix */
+.sticky-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.row.justify-content-center.align-items-center {
+  margin-bottom: 100px;
+}
+
+
+.homepage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.github-link img {
+  filter: brightness(0) invert(1);
+}
+
+/* Put these at the very bottom of your CSS file */
+.resume-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;                 /* small, tight spacing */
+}
+
+.resume-wrap a {
+  color: white !important;  /* make “Resume” white */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Stronger than .col-lg-6 img and with !important to win */
+.col-lg-6 img.arrow-up-right,
+img.arrow-up-right {
+  width: 20px !important;
+  height: 20px !important;
+  filter: brightness(0) invert(1) !important; /* force white icon */
+  object-fit: contain !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+
+
+.about-container {
+  position: relative;
+  z-index: 10;
+}
+
+.about-container h1,
+.about-container p {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.about-container .col-6{
+    margin-top: 100px;
+}
+
+/* Make skills list white */
+.skills-list {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills-list li {
+  color: #fff;
+  font-family: inherit;
+}
+
+/* Make all text and links in about-container white and consistent font */
+.about-container,
+.about-container h1,
+.about-container h5,
+.about-container p,
+.about-container li,
+.about-container a {
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  opacity: 1 !important;
+}
+
+/* Make <a> elements look like regular text, but white */
+.about-container a {
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* Move ABOUT ME header higher */
+.AboutMeDiv h1 {
+  margin-top: 0 !important;
+  margin-bottom: 1.2rem;
+  padding-top: 0 !important;
+}
