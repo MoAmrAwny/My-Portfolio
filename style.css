@@ -1,0 +1,301 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #0D0E1A !important;
+    color: #fff;
+}
+
+/* Force all Bootstrap containers to be transparent
+* {
+    background-color: transparent !important;
+} */
+
+.sticky-layout {
+    min-height: 100svh;             /* full viewport height, mobile-safe */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sticky-layout main {
+    flex: 1 0 auto;                 /* push footer to the bottom */
+  }
+/* Override only the main homepage background */
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D0E1A !important;
+    /* background-image: url('pexels-umkreisel-app-956981.jpg'); */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; */
+}
+
+/* SVG Background Overlay */
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-overlay.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+#mo{
+    padding: 60px 60px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Make navbar transparent */
+.navbar {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Align navigation links to the right */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+/* Make navbar text completely white */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+
+
+/* Main content styling */
+.main-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+/* Main content container - ensure it's above the background */
+.row.p-4.pb-0.pe-lg-0.pt-lg-5.align-items-center.rounded-3.border.shadow-lg {
+    position: relative;
+    z-index: 10;
+}
+
+/* Style the rounded image */
+.rounded-lg-3 {
+    border-radius: 1rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px !important;
+    width: 100% !important;
+}
+
+.rounded-lg-3:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure the image fits properly in its container */
+.rounded-lg-3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* Profile image styling */
+.profile-image {
+    max-width: 100% !important;
+    height: auto !important;
+    width: 350px !important;
+    height: 500px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+}
+
+/* Make the header text white */
+.display-4.text-body-emphasis {
+    color: white !important;
+}
+
+.display-5 {
+    color: white !important;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-align: left !important;
+}
+
+.lead {
+    color: white !important;
+    margin-bottom: 2rem;
+    text-align: left !important;
+}
+
+/* Override Bootstrap border class */
+.border,
+div.border,
+.row.border,
+.rounded-3.border {
+    border: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* Style the Resume button - PROPERLY SIZED */
+.btn-primary,
+.btn-outline-secondary {
+    background-color: white !important;
+    color: #7A85C1 !important;
+    border: 2px solid white !important;
+    font-weight: bold !important;
+    padding: 12px 32px !important;
+    font-size: 16px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover,
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa !important;
+    color: #7A85C1 !important;
+    border: 2px solid white !important;
+    transform: translateY(-1px);
+}
+
+img.logo{
+    color:white !important;
+    filter: brightness(0) invert(1) !important;
+    vertical-align: middle !important;
+    margin-right: 8px !important;
+    display: inline-block !important;
+    position: relative !important;
+    top: 0px !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* Ensure the entire row is above the background */
+.row.flex-lg-row-reverse.align-items-center.g-5.py-5 {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Ensure content is properly positioned */
+.col-lg-6 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Control image size */
+.col-lg-6 img {
+    max-width: 100% !important;
+    height: 500px !important;
+    width: 350px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
+
+/* Footer styling */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(13, 14, 26, 0.8) !important;
+    backdrop-filter: blur(10px);
+    margin-top: auto;
+}
+
+footer .text-white {
+    color: white !important;
+}
+
+footer a img {
+    filter: brightness(0) invert(1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .profile-image {
+        max-width: 300px !important;
+        height: auto !important;
+        width: auto !important;
+        margin-bottom: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+
+    .lead {
+        text-align: center !important;
+    }
+    
+    .col-lg-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+.project-1{
+    height: 200px;
+}
+.project-text{
+    color: white;
+}
+
